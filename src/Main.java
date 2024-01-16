@@ -16,7 +16,7 @@ public class Main {
         try {
             Connection connection = DriverManager.getConnection(url, username, password);
             Statement statement = connection.createStatement();
-            String query = String.format("INSERT INTO students(name,age,marks) VALUES('%s',%o,%f)", "Rahul", 23, 74.4);
+            String query = String.format("INSERT INTO students(name,age,marks) VALUES('%s',%o,%f)", "Rahul", 33, 74.4);
             int rowsAffected = statement.executeUpdate(query);
             if (rowsAffected > 0) {
                 System.out.println("Data Inserted Successfully !");
@@ -25,10 +25,8 @@ public class Main {
             }
 
         }
-
           catch(SQLException e){
                 System.out.println(e.getMessage());
             }
-
         }
     }
