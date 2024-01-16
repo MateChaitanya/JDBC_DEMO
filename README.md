@@ -1,4 +1,4 @@
-# JDBC Tutorial Repository
+# JDBC Tutorial
 
 This repository contains code examples and a tutorial for connecting Java code to MySQL using JDBC (Java Database Connectivity). The tutorial covers various CRUD (Create, Read, Update, Delete) operations with MySQL using Java.
 
