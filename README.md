@@ -29,7 +29,7 @@ Before you begin, make sure you have the following prerequisites installed:
 1. Clone this repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/jdbc-tutorial.git
+    git clone https://github.com/MateChaitanya/jdbc-tutorial.git
     ```
 
 2. Set up your MySQL database and configure the connection parameters in the Java code.
