@@ -1,5 +1,5 @@
 import java.sql.*;
-public class Retrive {
+public class Insert {
     private static final String url = "jdbc:mysql://localhost:3306/mydb";
     private static final String username = "root";
     private static final String password = "Chaitu@123";
@@ -15,19 +15,16 @@ public class Retrive {
         try{
             Connection connection = DriverManager.getConnection(url, username ,password);
             Statement statement = connection.createStatement();
-            String query = "select * from students"; // retrive the data
-            ResultSet resultset = statement.executeQuery(query);
-            while(resultset.next()){
-                int id = resultset.getInt("id");
-                String name = resultset.getString("name");
-                int age = resultset.getInt("age");
-                double marks = resultset.getDouble("marks");
-                System.out.println("ID: "+id);
-                System.out.println("NAME: "+name);
-                System.out.println("AGE: "+age);
-                System.out.println("MARKS: "+marks);
+            String query = String.format("INSERT INTO students(name,age , marks) VALUES('%s',%o,%f)","Ramu",23,78.9);
 
+            //("Rahul",25,75.5);
+            int rowsAffected = statement.executeUpdate(query);
+            if (rowsAffected>0){
+                System.out.println("Data Inserted Successfully!");
+            }else{
+                System.out.println("Data not Inserted !");
             }
+
 
         }catch (SQLException e){
             System.out.println(e.getMessage());
