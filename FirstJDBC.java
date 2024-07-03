@@ -7,7 +7,7 @@ class FirstJDBC{
             Class.forName("com.mysql.jdbc.Driver");
 
             //Creating a connection
-            //String url ="jdbc:mysql://localhost:3306/jdbc?useSSL=false&serverTimezone=UTC";
+            //String url ="jdbc:mysql://localhost:3306/jdbc ?useSSL=false&serverTimezone=UTC";
             
             String url ="jdbc:mysql://localhost:3306/jdbc";
             String username = "root";
