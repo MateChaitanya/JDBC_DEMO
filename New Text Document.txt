@@ -1,0 +1,7 @@
+1) Open the cmd and insert below command to run the code 
+
+-  cd C:\Users\HP\Desktop\JDBC 
+
+-  javac Fun.java
+
+-  java Fun

@@ -1,4 +1,5 @@
 import java.sql.*;
+import java.io.*;
 class Fun
 {
 
@@ -25,9 +26,16 @@ class Fun
 
             PreparedStatement pstmt = con.prepareStatement(q);
 
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("Enter name :");
+            String name = br.readLine();
+
+            System.out.println("Enter City:");
+            String city = br.readLine();
+
             //set the values to query
-            pstmt.setString(1,"Chaitanya mate");
-            pstmt.setString(2,"Mumbai");
+            pstmt.setString(1,name);
+            pstmt.setString(2,city);
 
             pstmt.executeUpdate();
 
